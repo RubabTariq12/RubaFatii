@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LuxeLayer - Login</title>
+
+    <style>
+        /* Styles for the login page */
+        * {
+            padding: 0;
+            margin: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f5f5f5;
+        }
+
+        .navbar {
+            width: 100%;
+            height: 70px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            background-color: black;
+            color: white;
+            padding: 10px 20px;
+            position: fixed;
+            top: 0;
+            z-index: 10;
+        }
+
+        .logo {
+            font-size: 30px;
+            color: darkmagenta;
+            text-decoration: none;
+        }
+
+        #login {
+            margin-top: 100px;
+            text-align: center;
+            padding: 40px;
+            background-color: white;
+            width: 300px;
+            margin-left: auto;
+            margin-right: auto;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            position: relative;
+        }
+
+        #login h1 {
+            font-size: 30px;
+            color: darkmagenta;
+        }
+
+        input[type="text"], input[type="password"] {
+            width: 100%;
+            padding: 10px;
+            margin: 10px 0;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+
+        button {
+            width: 100%;
+            padding: 10px;
+            background-color: darkmagenta;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background-color: white;
+            color: darkmagenta;
+        }
+
+        .cancel {
+            position: absolute;
+            top: 10px;
+            right: 10px;
+            color: darkmagenta;
+            cursor: pointer;
+            font-size: 24px;
+            font-weight: bold;
+        }
+
+        .cancel:hover {
+            color: red;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="navbar">
+        <a href="index.html" class="logo">LuxeLayer</a>
+    </div>
+
+    <div id="login">
+        <span class="cancel" onclick="window.location.href='index.html';">X</span>
+        <h1>Login</h1>
+        <form id="loginForm">
+            <input type="text" id="username" placeholder="Enter your email" required>
+            <input type="password" id="password" placeholder="Enter your password" required>
+            <a href="logindetail.html"><button type="submit">Login</button></a>
+        </form>
+    </div>
+
+    <script>
+        // Handle login validation and redirect to the account page
+        document.getElementById('loginForm').addEventListener('submit', function(event) {
+            event.preventDefault();  // Prevent form from submitting
+
+            // Get the input values
+            var username = document.getElementById('username').value;
+            var password = document.getElementById('password').value;
+
+            // You can now accept any email/password and log in
+            console.log("Login form submitted");
+            console.log("Entered username: ", username);
+            console.log("Entered password: ", password);
+
+            // Redirect to the profile page after login
+            window.location.href = "loginverfied.html";
+        });
+    </script>
+</body>
+</html>
