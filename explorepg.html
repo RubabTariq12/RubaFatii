@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Explore LuxeLayer</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            background-color: #f5f5f5;
+        }
+
+        .navbar {
+            background-color: black;
+            color: white;
+            padding: 15px 30px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .navbar .logo {
+            font-size: 30px;
+            color: darkmagenta;
+            text-decoration: none;
+        }
+
+        .navbar nav ul {
+            list-style: none;
+            display: flex;
+            gap: 20px;
+        }
+
+        .navbar nav ul li a {
+            color: white;
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+        .navbar nav ul li a:hover {
+            color: darkmagenta;
+        }
+
+        .explore-section {
+            padding: 100px 30px 30px;
+            text-align: center;
+        }
+
+        .explore-section h1 {
+            font-size: 36px;
+            color: darkmagenta;
+            margin-bottom: 30px;
+        }
+
+        .products {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 30px;
+            justify-content: center;
+        }
+
+        .product-card {
+            background-color: white;
+            padding: 20px;
+            border-radius: 15px;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+            width: 250px;
+        }
+
+        .product-card img {
+            width: 100%;
+            height: 300px;
+            object-fit: cover;
+            border-radius: 10px;
+        }
+
+        .product-card h3 {
+            color: #333;
+            margin: 10px 0;
+        }
+
+        .product-card p {
+            color: #777;
+            font-size: 14px;
+        }
+
+        .product-card button {
+            margin-top: 10px;
+            background-color: darkmagenta;
+            color: white;
+            border: none;
+            padding: 8px 15px;
+            border-radius: 20px;
+            cursor: pointer;
+        }
+
+        .product-card button:hover {
+            background-color: white;
+            color: darkmagenta;
+            border: 1px solid darkmagenta;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="navbar">
+        <a class="logo" href="homepg.html">LuxeLayer</a>
+        <nav>
+            <ul>
+                <li><a href="homepg.html">Home</a></li>
+                <li><a href="./product.html">Products</a></li>
+                <li><a href="./login.html">Account</a></li>
+                <li><a href="./review.html">Reviews</a></li>
+            </ul>
+        </nav>
+    </div>
+
+    <section class="explore-section">
+        <h1>Explore Our Latest Collection</h1>
+        <div class="products">
+            <div class="product-card">
+                <img src="images/dress1.jpeg" alt="Dress 1">
+                <h3>Elegant Maroon</h3>
+                <p>Premium stitched 3-piece suit for festive occasions.</p>
+                <a href="loginrequiredpg.html"><button>Shop now</button></a>
+            </div>
+            <div class="product-card">
+                <img src="images/image 2.png" alt="Dress 2">
+                <h3>Classic Beige</h3>
+                <p>Unstitched cotton lawn fabric with digital prints.</p>
+                <a href="loginrequiredpg.html"><button>Shop now</button></a>
+            </div>
+            <div class="product-card">
+                <img src="images/image 3.jpeg" alt="Dress 3">
+                <h3>Royal Blue</h3>
+                <p>Silk stitched kurti with embroidery work.</p>
+                <a href="loginrequiredpg.html"><button>Shop now</button></a>
+            </div>
+        </div>
+    </section>
+
+</body>
+</html>

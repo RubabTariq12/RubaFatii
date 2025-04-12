@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>LuxeLayer</title>
+  <style>
+    * {
+      padding: 0;
+      margin: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #f5f5f5;
+    }
+
+    .navbar {
+      width: 100%;
+      height: 70px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      background-color: black;
+      color: white;
+      padding: 10px 20px;
+      position: fixed;
+      top: 0;
+      z-index: 10;
+    }
+
+    .logo {
+      font-size: 30px;
+      color: darkmagenta;
+      text-decoration: none;
+    }
+
+    nav ul {
+      list-style-type: none;
+      display: flex;
+      gap: 20px;
+    }
+
+    nav ul li a {
+      text-decoration: none;
+      color: white;
+      font-weight: bold;
+      padding: 10px;
+      transition: color 0.3s ease;
+    }
+
+    nav ul li a:hover {
+      color: darkmagenta;
+    }
+
+    #home {
+      background-color: #f5f5f5;
+      padding-top: 120px;
+      min-height: 100vh;
+      text-align: center;
+    }
+
+    .container {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-wrap: wrap;
+    }
+
+    .main {
+      max-width: 600px;
+    }
+
+    .main h1 {
+      font-size: 40px;
+      margin-bottom: 20px;
+    }
+
+    span {
+      color: darkmagenta;
+    }
+
+    .main p {
+      font-size: 18px;
+      margin-bottom: 20px;
+    }
+
+    .main button {
+      background-color: darkmagenta;
+      color: white;
+      padding: 10px 25px;
+      border: none;
+      border-radius: 25px;
+      font-size: 16px;
+      cursor: pointer;
+      transition: background-color 0.3s;
+    }
+
+    .main button:hover {
+      background-color: white;
+      color: darkmagenta;
+    }
+
+    .main button a {
+      color: white;
+      text-decoration: none;
+    }
+
+    .main button:hover a {
+      color: darkmagenta;
+    }
+
+    footer {
+      background-color: black;
+      color: #f0f0f0;
+      padding: 30px 20px;
+      font-size: 0.9em;
+      margin-top: 50px;
+    }
+
+    .footer-container {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 30px;
+      justify-content: space-between;
+    }
+
+    .footer-section h3 {
+      color: darkmagenta;
+      margin-bottom: 10px;
+    }
+
+    .footer-section p,
+    .footer-section ul,
+    .footer-section a {
+      color: #bdbdbd;
+      text-decoration: none;
+      line-height: 1.5;
+    }
+
+    .footer-section ul {
+      list-style: none;
+    }
+
+    .footer-section ul li {
+      margin-bottom: 8px;
+    }
+
+    .footer-section .social a {
+      display: block;
+      color: #f0f0f0;
+      margin-bottom: 5px;
+    }
+
+    .footer-bottom {
+      text-align: center;
+      margin-top: 20px;
+      font-size: 15px;
+      border-top: 1px solid #555;
+      padding-top: 15px;
+      color: #bdbdbd;
+    }
+  </style>
+</head>
+<body>
+
+  <section id="home">
+    <div class="navbar">
+      <a class="logo" href="#">LuxeLayer</a>
+      <nav>
+        <ul>
+          <li><a href="#home">Home</a></li>
+          <li><a href="mainproduct.html">Products</a></li>
+          <li><a href="loginpg.html">Account</a></li>
+          <li><a href="track.html">Track</a></li>
+          <li><a href="review.html">Reviews</a></li>
+        </ul>
+      </nav>
+    </div>
+
+    <div class="container">
+      <div class="main">
+        <h1><b>Welcome to</b> <br /><span>LuxeLayer</span></h1>
+        <p>Unleash Your Style Where Fashion Meets Elegance</p>
+        <button><a href="explorepg.html">Explore</a></button>
+      </div>
+    </div>
+  </section>
+
+  <footer>
+    <div class="footer-container">
+      <div class="footer-section about">
+        <h3>About Us</h3>
+        <p>
+          We are a premium clothing brand offering high-quality stitched and
+          unstitched articles tailored to your style and comfort.
+        </p>
+      </div>
+
+      <div class="footer-section links">
+        <h3>Quick Links</h3>
+        <ul>
+          <li><a href="#home">Home</a></li>
+          <li><a href="mainproduct.html">Products</a></li>
+          <li><a href="review.html">Reviews</a></li>
+          <li><a href="login.html">Account</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-section contact">
+        <h3>Contact Us</h3>
+        <p>03217122121</p>
+        <p><a href="mailto:fatima3@LuxeLayer.com">fatima3@LuxeLayer.com</a></p>
+      </div>
+
+      <div class="footer-section social">
+        <h3>Follow Us</h3>
+        <a href="https://twitter.com" target="_blank">Twitter</a>
+        <a href="https://web.whatsapp.com" target="_blank">WhatsApp</a>
+        <a href="https://www.instagram.com" target="_blank">Instagram</a>
+      </div>
+    </div>
+
+    <div class="footer-bottom">
+      <p>&copy; 2024 LuxeLayer. All rights reserved.</p>
+    </div>
+  </footer>
+</body>
+</html>
