@@ -1,5 +1,5 @@
-<!-- Rubab Tariq Id->22008105_002 -->
-<!DOCTYPE html>
+ <!-- Rubab Tariq Id->22008105_002 -->
+  <!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
@@ -8,6 +8,7 @@
   <style>
     body {
       font-family: Arial, sans-serif;
+      
       background-image: url('images/allison-saeng-PNygokR4vW4-unsplash.jpg');
       background-size: cover;
       background-position: center;
@@ -26,67 +27,90 @@
       background-color: rgba(0,0,0,0.6);
       padding: 15px;
       border-radius: 8px;
+      text-align: center;
     }
 
     form {
-      background-color: rgba(255, 245, 245, 0.98); /* Soft pinkish-white */
+      background-color: rgba(255, 255, 255, 0.15); /* dull overlay */
+      backdrop-filter: blur(10px);
+      -webkit-backdrop-filter: blur(10px);
       padding: 40px;
       border-radius: 15px;
-      box-shadow: 0 8px 30px rgba(0,0,0,0.4);
+      box-shadow: 0 8px 30px rgba(0,0,0,0.3);
       width: 90%;
       max-width: 400px;
       margin: 20px;
-      border: 2px solid rgba(155, 0, 155, 0.3); /* Subtle border */
-      backdrop-filter: blur(5px); /* Frosted glass effect */
+      border: 1px solid rgba(255,255,255,0.3);
+    }
+
+    .form-group {
+      margin-bottom: 20px;
+    }
+
+    label {
+      display: block;
+      margin-bottom: 8px;
+      font-weight: bold;
+      color: #333;
     }
 
     input[type="email"], 
     input[type="text"] {
       width: 100%;
       padding: 12px;
-      margin: 15px 0;
-      border: 2px solid rgba(155, 0, 155, 0.2); /* Light magenta border */
-      border-radius: 8px;
+      margin: 5px 0 15px 0;
+      border: 1px solid #ddd;
+      border-radius: 6px;
       box-sizing: border-box;
       font-size: 16px;
-      background-color: rgba(255, 255, 255, 0.9);
+      transition: border 0.3s;
+    }
+
+    input[type="email"]:focus, 
+    input[type="text"]:focus {
+      border-color: darkmagenta;
+      outline: none;
     }
 
     button {
       width: 100%;
       padding: 14px;
-      background-color: rgba(155, 0, 155, 0.9); /* Transparent magenta */
+      background-color: darkmagenta;
       color: white;
-      border: 2px solid darkmagenta;
-      border-radius: 8px;
+      border: none;
+      border-radius: 6px;
       cursor: pointer;
       font-size: 16px;
+      font-weight: bold;
       transition: all 0.3s ease;
       margin-top: 10px;
     }
 
     button:hover {
-      background-color: rgba(255, 255, 255, 0.9);
-      color: darkmagenta;
+      background-color: #9b009b;
+      transform: translateY(-2px);
+      box-shadow: 0 4px 8px rgba(0,0,0,0.1);
     }
   </style>
 </head>
 <body>
   <h1>Track Your Order</h1>
   <form onsubmit="redirectToStatus(event)">
-    <input type="email" placeholder="Enter your email" required />
-    <input type="text" placeholder="Order Number" required />
+    <div class="form-group">
+      <label for="email">Email Address</label>
+      <input type="email" id="email" placeholder="Enter your email" required />
+    </div>
+    <div class="form-group">
+      <label for="order-number">Order Number</label>
+      <input type="text" id="order-number" placeholder="Enter order number" required />
+    </div>
     <button type="submit">Track Order</button>
   </form>
-<<<<<<< HEAD
-   
-=======
-// I use this because When the function redirectToStatus() is called (via an event like clicking a button or link),
-    it prevents the default behavior (like a link redirect) and instead redirects the user to the "orderstatus.html" page.
->>>>>>> 33be2199931f63cd0d6975025ed227be9126c3cb
+
   <script>
     function redirectToStatus(e) {
       e.preventDefault();
+      // Here you can add validation before redirecting
       window.location.href = "orderstatus.html";
     }
   </script>
