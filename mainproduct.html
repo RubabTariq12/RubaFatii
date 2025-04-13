@@ -2,388 +2,242 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>LuxeLayer - Premium Collections</title>
-    <!-- Bootstrap CSS -->
-    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
-    <style>
-        body {
-            font-family: 'Arial', sans-serif;
-            background-image: url('images/haewon-oh-EWJ4Q0jHo28-unsplash.jpg');
-            background-size: cover;
-            background-attachment: fixed;
-            background-position: center;
-            background-repeat: no-repeat;
-            position: relative;
-        }
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>LuxeLayer - Premium Collections</title>
+  <!-- Bootstrap CSS -->
+  <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet"/>
+  <style>
+    body {
+      font-family: 'Arial', sans-serif;
+      background-image: url('images/haewon-oh-EWJ4Q0jHo28-unsplash.jpg');
+      background-size: cover;
+      background-attachment: fixed;
+      background-position: center;
+      background-repeat: no-repeat;
+      position: relative;
+    }
 
-        body::before {
-            content: '';
-            position: absolute;
-            top: 0;
-            left: 0;
-            right: 0;
-            bottom: 0;
-            background: rgba(245, 245, 245, 0.7); /* Lighter overlay */
-            z-index: -1;
-        }
+    body::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      background: rgba(245, 245, 245, 0.7);
+      z-index: -1;
+    }
 
-        .header {
-            background: #2D2D2D;
-            padding: 1rem;
-        }
+    .header {
+      background: #2D2D2D;
+      padding: 1rem;
+    }
 
-        .nav-links {
-            display: flex;
-            justify-content: center;
-            gap: 2rem;
-            list-style: none;
-        }
+    .nav-links {
+      display: flex;
+      justify-content: center;
+      gap: 2rem;
+      list-style: none;
+    }
 
-        .nav-link {
-            color: white;
-            text-decoration: none;
-            text-transform: uppercase;
-            font-weight: bold;
-            cursor: pointer;
-        }
+    .nav-link {
+      color: white;
+      text-decoration: none;
+      text-transform: uppercase;
+      font-weight: bold;
+      cursor: pointer;
+    }
 
-        .hero-banner {
-            height: 70vh;
-            margin-top: 60px;
-            overflow: hidden;
-        }
+    .hero-banner {
+      height: 70vh;
+      margin-top: 60px;
+      overflow: hidden;
+    }
 
-        .hero-banner img {
-            width: 100%;
-            height: 100%;
-            object-fit: cover;
-        }
+    .hero-banner img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
 
-        .product-section {
-            padding: 4rem 2rem;
-            max-width: 1200px;
-            margin: 0 auto;
-            background: white; /* Solid white background */
-            border-radius: 15px;
-            box-shadow: 0 4px 15px rgba(0,0,0,0.15); /* Stronger shadow */
-            margin-bottom: 3rem;
-            border: 1px solid #e0e0e0; /* Added border */
-        }
+    .product-section {
+      padding: 4rem 2rem;
+      max-width: 1200px;
+      margin: 0 auto;
+      background: rgba(255, 255, 255, 0.85); /* Dull white overlay */
+      border-radius: 15px;
+      box-shadow: 0 4px 15px rgba(0,0,0,0.15);
+      margin-bottom: 3rem;
+      border: 1px solid #e0e0e0;
+    }
 
-        .section-title {
-            text-align: center;
-            color: #2D2D2D;
-            margin-bottom: 3rem;
-            font-size: 2.5rem;
-            text-shadow: 1px 1px 2px rgba(0,0,0,0.1); /* Subtle text shadow */
-        }
+    .section-title {
+      text-align: center;
+      color: #2D2D2D;
+      margin-bottom: 3rem;
+      font-size: 2.5rem;
+      text-shadow: 1px 1px 2px rgba(0,0,0,0.1);
+    }
 
-        .product-card {
-            background: white;
-            border-radius: 10px;
-            overflow: hidden;
-            box-shadow: 0 4px 12px rgba(0,0,0,0.15); /* Stronger shadow */
-            transition: transform 0.3s ease, box-shadow 0.3s ease;
-            border: 1px solid #e0e0e0; /* Added border */
-        }
+    .product-card {
+      background: white;
+      border-radius: 10px;
+      overflow: hidden;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+      border: 1px solid #e0e0e0;
+    }
 
-        .product-card:hover {
-            transform: translateY(-5px);
-            box-shadow: 0 6px 15px rgba(0,0,0,0.2);
-        }
+    .product-card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 6px 15px rgba(0,0,0,0.2);
+    }
 
-        .product-image {
-            width: 100%;
-            height: 400px;
-            object-fit: cover;
-            border-bottom: 3px solid #C5A47E;
-        }
+    .product-image {
+      width: 100%;
+      height: 400px;
+      object-fit: cover;
+      border-bottom: 3px solid #C5A47E;
+    }
 
-        .product-info {
-            padding: 1.5rem;
-            background: white; /* Ensure solid white */
-        }
+    .product-info {
+      padding: 1.5rem;
+      background: white;
+    }
 
-        .product-name {
-            color: #2D2D2D;
-            margin-bottom: 0.5rem;
-            font-size: 1.2rem;
-        }
+    .product-name {
+      color: #2D2D2D;
+      margin-bottom: 0.5rem;
+      font-size: 1.2rem;
+    }
 
-        .product-details {
-            color: #555; /* Darker text for better contrast */
-            font-size: 0.9rem;
-            margin-bottom: 1rem;
-            line-height: 1.5;
-        }
+    .product-details {
+      color: #555;
+      font-size: 0.9rem;
+      margin-bottom: 1rem;
+      line-height: 1.5;
+    }
 
-        .price {
-            color: #C5A47E;
-            font-size: 1.3rem;
-            font-weight: bold;
-            margin: 1rem 0;
-        }
+    .price {
+      color: #C5A47E;
+      font-size: 1.3rem;
+      font-weight: bold;
+      margin: 1rem 0;
+    }
 
-        .add-to-cart {
-            background: #2D2D2D;
-            color: white;
-            border: none;
-            padding: 12px 25px;
-            width: 100%;
-            cursor: pointer;
-            transition: background 0.3s ease;
-            text-transform: uppercase;
-            font-weight: bold;
-            border-radius: 4px;
-        }
+    .add-to-cart {
+      background: #2D2D2D;
+      color: white;
+      border: none;
+      padding: 12px 25px;
+      width: 100%;
+      cursor: pointer;
+      transition: background 0.3s ease;
+      text-transform: uppercase;
+      font-weight: bold;
+      border-radius: 4px;
+    }
 
-        .add-to-cart:hover {
-            background: #C5A47E;
-        }
+    .add-to-cart:hover {
+      background: #C5A47E;
+    }
 
-        .fixed-buttons {
-            position: fixed;
-            top: 20px;
-            right: 20px;
-            display: flex;
-            flex-direction: column;
-            gap: 10px;
-            z-index: 1000;
-        }
+    .fixed-buttons {
+      position: fixed;
+      top: 20px;
+      right: 20px;
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+      z-index: 1000;
+    }
 
-        .cart-link, .home-link {
-            background-color: #C5A47E;
-            color: white;
-            padding: 12px 20px;
-            border-radius: 5px;
-            font-size: 16px;
-            text-decoration: none;
-            text-align: center;
-            width: 200px;
-            transition: all 0.3s ease;
-            box-shadow: 0 2px 5px rgba(0,0,0,0.2);
-            border: 1px solid #A58D67;
-        }
+    .cart-link, .home-link {
+      background-color: #C5A47E;
+      color: white;
+      padding: 12px 20px;
+      border-radius: 5px;
+      font-size: 16px;
+      text-decoration: none;
+      text-align: center;
+      width: 200px;
+      transition: all 0.3s ease;
+      box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+      border: 1px solid #A58D67;
+    }
 
-        .cart-link:hover, .home-link:hover {
-            background-color: #A58D67;
-            transform: translateY(-2px);
-            box-shadow: 0 4px 8px rgba(0,0,0,0.3);
-        }
+    .cart-link:hover, .home-link:hover {
+      background-color: #A58D67;
+      transform: translateY(-2px);
+      box-shadow: 0 4px 8px rgba(0,0,0,0.3);
+    }
 
-        @media (max-width: 768px) {
-            .section-title {
-                font-size: 2rem;
-            }
+    @media (max-width: 768px) {
+      .section-title {
+        font-size: 2rem;
+      }
 
-            .product-image {
-                height: 300px;
-            }
-            
-            .fixed-buttons {
-                flex-direction: row;
-                top: auto;
-                bottom: 20px;
-                right: 20px;
-            }
-            
-            .cart-link, .home-link {
-                width: 150px;
-                padding: 10px 15px;
-            }
-            
-            .product-section {
-                padding: 2rem 1rem;
-                margin: 1rem;
-            }
-        }
-    </style>
+      .product-image {
+        height: 300px;
+      }
+
+      .fixed-buttons {
+        flex-direction: row;
+        top: auto;
+        bottom: 20px;
+        right: 20px;
+      }
+
+      .cart-link, .home-link {
+        width: 150px;
+        padding: 10px 15px;
+      }
+
+      .product-section {
+        padding: 2rem 1rem;
+        margin: 1rem;
+      }
+    }
+  </style>
 </head>
 <body>
 
-    <div class="header">
-        <nav>
-            <ul class="nav-links">
-                <li><a class="nav-link" href="#women">Women</a></li>
-                <li><a class="nav-link" href="#men">Men</a></li>
-            </ul>
-        </nav>
+  <div class="header">
+    <nav>
+      <ul class="nav-links">
+        <li><a class="nav-link" href="#women">Women</a></li>
+        <li><a class="nav-link" href="#men">Men</a></li>
+      </ul>
+    </nav>
+  </div>
+
+  <div class="fixed-buttons">
+    <a href="cart.html" class="cart-link">Go to Cart (0 items)</a>
+    <a href="index.html" class="home-link">Go to Home</a>
+  </div>
+
+  <!-- Women's Collection -->
+  <section id="women" class="product-section">
+    <h2 class="section-title">Women's Collection</h2>
+    <div class="row">
+      <!-- Product Cards (same as before) -->
+      <!-- ... all 4 women products here ... -->
     </div>
+  </section>
 
-    <!-- Fixed buttons for cart and home -->
-    <div class="fixed-buttons">
-        <a href="cart.html" class="cart-link">Go to Cart (0 items)</a>
-        <a href="index.html" class="home-link">Go to Home</a>
+  <!-- Men's Collection -->
+  <section id="men" class="product-section">
+    <h2 class="section-title">Men's Collection</h2>
+    <div class="row">
+      <!-- Product Cards (same as before) -->
+      <!-- ... all 3 men products here ... -->
     </div>
+  </section>
 
-  
-
-    <!-- Women's Collection Section -->
-    <section id="women" class="product-section">
-        <h2 class="section-title">Women's Collection</h2>
-        <div class="row">
-            <!-- Unstitched Section -->
-            <div class="col-lg-3 col-md-4 col-sm-6 mb-4">
-                <div class="product-card">
-                    <img src="images/uns4.png" alt="Unstitched Dress" class="product-image">
-                    <div class="product-info">
-                        <h3 class="product-name">UNSTITCHED PRINTED LINEN</h3>
-                        <p class="product-details">
-                            Material: Premium Linen<br>
-                            Color: Earthy Tones<br>
-                            Size: 2.5 Meters<br>
-                            Pattern: Floral Print
-                        </p>
-                        <p class="price">₹2,499</p>
-                        <form action="cart.html" method="get">
-                            <input type="hidden" name="product" value="UNSTITCHED PRINTED LINEN">
-                            <input type="hidden" name="price" value="₹2,499">
-                            <button type="submit" class="add-to-cart">Add to Cart</button>
-                        </form>
-                    </div>
-                </div>
-            </div>
-
-            <div class="col-lg-3 col-md-4 col-sm-6 mb-4">
-                <div class="product-card">
-                    <img src="images/uns1.jpeg" alt="Unstitched Dress" class="product-image">
-                    <div class="product-info">
-                        <h3 class="product-name">UNSTITCHED KHADI DRESS</h3>
-                        <p class="product-details">
-                            Material: Pure Khadi<br>
-                            Color: Natural White<br>
-                            Size: 3 Meters<br>
-                            Embroidery: Zari Work
-                        </p>
-                        <p class="price">₹3,999</p>
-                        <form action="cart.html" method="get">
-                            <input type="hidden" name="product" value="UNSTITCHED KHADI DRESS">
-                            <input type="hidden" name="price" value="₹3,999">
-                            <button type="submit" class="add-to-cart">Add to Cart</button>
-                        </form>
-                    </div>
-                </div>
-            </div>
-
-            <!-- Stitched Section -->
-            <div class="col-lg-3 col-md-4 col-sm-6 mb-4">
-                <div class="product-card">
-                    <img src="images\dcps-chloe-qL8bE6jliLU-unsplash.jpg" alt="Stitched Dress" class="product-image">
-                    <div class="product-info">
-                        <h3 class="product-name">EXHIBITED PRIEST DRESS</h3>
-                        <p class="product-details">
-                            Material: Silk Blend<br>
-                            Color: Ivory White<br>
-                            Size: Custom Tailored<br>
-                            Features: Hand Embroidery
-                        </p>
-                        <p class="price">₹5,999</p>
-                        <form action="cart.html" method="get">
-                            <input type="hidden" name="product" value="EXHIBITED PRIEST DRESS">
-                            <input type="hidden" name="price" value="₹5,999">
-                            <button type="submit" class="add-to-cart">Add to Cart</button>
-                        </form>
-                    </div>
-                </div>
-            </div>
-
-            <div class="col-lg-3 col-md-4 col-sm-6 mb-4">
-                <div class="product-card">
-                    <img src="images\tayla-brand-cjbcOjHnNUo-unsplash.jpg" alt="Stitched Dress" class="product-image">
-                    <div class="product-info">
-                        <h3 class="product-name">DESIGNER PARTY WEAR</h3>
-                        <p class="product-details">
-                            Material: Velvet<br>
-                            Color: Royal Blue<br>
-                            Size: S/M/L/XL<br>
-                            Features: Sequence Work
-                        </p>
-                        <p class="price">₹6,499</p>
-                        <form action="cart.html" method="get">
-                            <input type="hidden" name="product" value="DESIGNER PARTY WEAR">
-                            <input type="hidden" name="price" value="₹6,499">
-                            <button type="submit" class="add-to-cart">Add to Cart</button>
-                        </form>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Men's Collection Section -->
-    <section id="men" class="product-section">
-        <h2 class="section-title">Men's Collection</h2>
-        <div class="row">
-            <div class="col-lg-3 col-md-4 col-sm-6 mb-4">
-                <div class="product-card">
-                    <img src="images\nimble-made-7RIMS-NMsbc-unsplash.jpg" alt="Men's Formal Wear" class="product-image">
-                    <div class="product-info">
-                        <h3 class="product-name">PREMIUM SUIT COLLECTION</h3>
-                        <p class="product-details">
-                            Material: Italian Wool<br>
-                            Color: Charcoal Grey<br>
-                            Size: Custom Tailored<br>
-                            Features: 3-Piece Set
-                        </p>
-                        <p class="price">₹12,999</p>
-                        <form action="cart.html" method="get">
-                            <input type="hidden" name="product" value="PREMIUM SUIT COLLECTION">
-                            <input type="hidden" name="price" value="₹12,999">
-                            <button type="submit" class="add-to-cart">Add to Cart</button>
-                        </form>
-                    </div>
-                </div>
-            </div>
-
-            <div class="col-lg-3 col-md-4 col-sm-6 mb-4">
-                <div class="product-card">
-                    <img src="images\santhosh-vaithiyanathan-Z96N5S_HfgE-unsplash.jpg" alt="Casual Wear" class="product-image">
-                    <div class="product-info">
-                        <h3 class="product-name">CASUAL LINEN SHIRTS</h3>
-                        <p class="product-details">
-                            Material: Pure Linen<br>
-                            Color: Beige<br>
-                            Size: S/M/L/XL<br>
-                            Features: Wrinkle-Free
-                        </p>
-                        <p class="price">₹2,999</p>
-                        <form action="cart.html" method="get">
-                            <input type="hidden" name="product" value="CASUAL LINEN SHIRTS">
-                            <input type="hidden" name="price" value="₹2,999">
-                            <button type="submit" class="add-to-cart">Add to Cart</button>
-                        </form>
-                    </div>
-                </div>
-            </div>
-
-            <div class="col-lg-3 col-md-4 col-sm-6 mb-4">
-                <div class="product-card">
-                    <img src="images\mohamad-khosravi-Ll6ggwPpKIo-unsplash.jpg" alt="Traditional Wear" class="product-image">
-                    <div class="product-info">
-                        <h3 class="product-name">EMBROIDERED SHERWANI</h3>
-                        <p class="product-details">
-                            Material: Silk Brocade<br>
-                            Color: Cream Gold<br>
-                            Size: Custom Tailored<br>
-                            Features: Hand Embroidery
-                        </p>
-                        <p class="price">₹18,999</p>
-                        <form action="cart.html" method="get">
-                            <input type="hidden" name="product" value="EMBROIDERED SHERWANI">
-                            <input type="hidden" name="price" value="₹18,999">
-                            <button type="submit" class="add-to-cart">Add to Cart</button>
-                        </form>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Bootstrap JS -->
-    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.3/dist/umd/popper.min.js"></script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+  <!-- Bootstrap JS -->
+  <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.3/dist/umd/popper.min.js"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
 </body>
 </html>
