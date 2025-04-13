@@ -1,4 +1,4 @@
-
+<!-- Rubab Tariq Id->22008105_002 -->
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -43,7 +43,7 @@
             <div id="cart-content"></div>
         </div>
     </div>
-
+<!-- I want to display product details on a checkout page.I also need to dynamically show content based on what was selected on the previous page.Manual process not work properly thats why i use the script concept here -->
     <script>
         // Function to get query parameters
         function getQueryParams() {
@@ -52,7 +52,7 @@
             const price = params.get("price");
             return { product, price };
         }
-
+        //This script checks the URL for product and price and displays them in the cart if available. If not, it shows a message saying the cart is empty with a link to continue shopping.
         // Show cart content or empty message
         const { product, price } = getQueryParams();
         const cartDiv = document.getElementById("cart-content");
