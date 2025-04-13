@@ -13,7 +13,9 @@
 
     body {
       font-family: Arial, sans-serif;
-      background-color: #f5f5f5;
+      background: url('images/background.jpeg') no-repeat center center fixed;
+      background-size: cover;
+      color: #333;
     }
 
     .navbar {
@@ -22,7 +24,7 @@
       display: flex;
       align-items: center;
       justify-content: space-between;
-      background-color: black;
+      background-color: rgba(0, 0, 0, 0.85);
       color: white;
       padding: 10px 20px;
       position: fixed;
@@ -55,7 +57,6 @@
     }
 
     #home {
-      background-color: #f5f5f5;
       padding-top: 120px;
       min-height: 100vh;
       text-align: center;
@@ -70,11 +71,16 @@
 
     .main {
       max-width: 600px;
+      background-color: #ffe6f0;
+      padding: 30px;
+      border-radius: 15px;
+      box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
     }
 
     .main h1 {
       font-size: 40px;
       margin-bottom: 20px;
+      font-family: 'Georgia', serif;
     }
 
     span {
@@ -84,6 +90,7 @@
     .main p {
       font-size: 18px;
       margin-bottom: 20px;
+      font-family: 'Arial', sans-serif;
     }
 
     .main button {
@@ -112,7 +119,7 @@
     }
 
     footer {
-      background-color: black;
+      background-color: rgba(0, 0, 0, 0.9);
       color: #f0f0f0;
       padding: 30px 20px;
       font-size: 0.9em;
